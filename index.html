@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="images/LL_icon.png" size="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="w3-bar w3-theme" id="nav">
+            <img src="images/LL_icon.png" id="icon" />
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="events.html" class="w3-bar-item w3-button">Events</a>
+            <a href="contact.html" class="w3-bar-item w3-button">Contact Us</a>
+            <a href="rides.html" class="w3-bar-item w3-button">Carpool</a>
+        </div>
+    </nav>
+
+    <div class="w3-theme3" id="first">
+        <div id="second">
+        <h1 id="welcome" class="w3-theme1">Welcome!</h1>
+            <p>
+                Greetings! We are the LCMS Lutherans of Liberty University! There aren't very many of us, but we are growing every year.
+                We know that it can be hard to be a confessional Lutheran at a Baptist college like LU, but that's why it is so important to connect with your
+                fellow outsiders. We are connected with Our Savior Lutheran Church in Lynchburg, currently pastored by Reverend Aaron Yaeger. We are not an official
+                club under Liberty University, but we still do a lot of activites together, and we love to hang out together and get up to shenanigans on campus.
+                <br> <br>
+                We also carpool to church whenever there are services. If you are able to give a ride, or need a ride, 
+                click <a href="rides.html">here</a> to get in touch with us!
+            </p>
+        </div>
+    </div>
+
+    <footer class="w3-bar w3-theme">
+        <div class="flex-container1">
+            <img id="logo" src="images/image.png">
+        </div>
+        <div class="flex-container" id="foot-links">
+            <a href="https://oursaviorlynchburg.org/" class="w3-bar-item w3-button" target="_blank">Connect with Our Savior Lutheran Church</a>
+            <a href="https://www.lcms.org/" class="w3-bar-item w3-button" target="_blank">More about the LCMS</a>
+        </div>
+        <div class="flex-container2">
+            <p id="date"></p>
+
+            <script defer>
+                // JS code to display the current date, and set the text color to red
+                const d = new Date();
+                let test = document.getElementById("date");
+                document.getElementById("date").innerHTML = "&copy " + (d.getMonth() + 1) + "/" + (d.getDay() + 1) + "/" + d.getFullYear();
+                test.style.color = "red";
+            </script>
+
+        </div>
+    </footer>
+</body>
+
+</html>
