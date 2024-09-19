@@ -48,9 +48,10 @@ function displayRiderForm() {
 function reserveSpot() {
     let choice = document.getElementById("drivers").value;
     let fname = document.getElementById("fname").value;
-    if (fname=="") {
-        alert("Name must be filled out");
-    }
+    if (document.getElementById("need").checked) {
+        if (fname=="") {
+            alert("Name must be filled out");
+        }
     switch (choice) {
         case "Greta":
             document.getElementById("displayName").innerHTML = "Welcome, " + fname + "! You have reserved a spot with Greta.";
@@ -61,6 +62,9 @@ function reserveSpot() {
         case "Grant":
             document.getElementById("displayName").innerHTML = "Welcome, " + fname + "! You have reserved a spot with Grant.";
     }
+} else {
+    displayName();
+}
 }
 
 function removeForm() {
