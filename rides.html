@@ -33,9 +33,9 @@
         <p id="current"></p>
         <form id="myForm">
             <p>Choose one:</p>
-            <input type="radio" id="give" name="ride" value="Give Rides" onclick="displayForm()">
+            <input type="radio" id="give" name="ride" value="Give Rides" onclick="removeForm(), displayDriverForm()">
             <label for="give">I can give rides</label><br>
-            <input type="radio" id="need" name="ride" value="Need Ride" onclick="removeForm()">
+            <input type="radio" id="need" name="ride" value="Need Ride" onclick="removeForm(), displayRiderForm()">
             <label for="need">I need a ride</label><br>
 
             <label for="fname">Please input your first name:</label><br>
@@ -48,7 +48,15 @@
             <label for="amount">How many passengers can you fit in your car?</label><br>
             <input type="number" id="amount"><br>
             </div>
-            <input type="submit" value="Submit" id="submit" style="margin-top:10px;" onclick='addCapacity(); displayName(); removeForm(); resetForm(); event.preventDefault();' />
+            <div id="select" style="display:none;">
+                <label for="amount">Select a driver:</label>
+                <select id="drivers">
+                <datalist id="drivers">
+                    
+                </datalist>
+                </select>
+            </div>
+            <input type="submit" value="Submit" id="submit" style="margin-top:10px;" onclick='addCapacity(); displayName(); reserveSpot(); removeForm(); resetForm(); event.preventDefault();' />
         </form>
         <p id="displayName"></p>
         </div>
