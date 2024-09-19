@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 
 <body>
@@ -19,7 +18,7 @@
         <div class="w3-bar w3-theme" id="nav">
             <img src="images/LL_icon.png" id="icon" />
             <a href="index.html" class="w3-bar-item w3-button">Home</a>
-            <a href="events.html" class="w3-bar-item w3-button">Events</a>            <a href="contact.html" class="w3-bar-item w3-button">Contact Us</a>
+            <a href="events.html" class="w3-bar-item w3-button">Events</a>
             <a href="rides.html" class="w3-bar-item w3-button">Carpool</a>
         </div>
     </nav>
@@ -31,17 +30,27 @@
             Every Sunday, we coordinate rides to make sure that everyone who wants to come to church can come. Whether you need a ride, or can give a ride, please 
             fill out the form below so that we can fit you into our plans!
         </p>
-        <form>
+        <p id="current"></p>
+        <form id="myForm">
             <p>Choose one:</p>
-            <input type="radio" id="give" name="ride" value="Give Rides">
+            <input type="radio" id="give" name="ride" value="Give Rides" onclick="displayForm()">
             <label for="give">I can give rides</label><br>
-            <input type="radio" id="need" name="ride" value="Need Ride">
+            <input type="radio" id="need" name="ride" value="Need Ride" onclick="removeForm()">
             <label for="need">I need a ride</label><br>
+
+            <label for="fname">Please input your first name:</label><br>
+            <input type="text" id="fname"><br>
 
             <label for="phone">Please input your phone number:</label><br>
             <input type="text" id="phone"><br>
-            <input type="submit" value="Submit" style="margin-top:10px;">
+
+            <div id="capacity" style="display: none;">
+            <label for="amount">How many passengers can you fit in your car?</label><br>
+            <input type="number" id="amount"><br>
+            </div>
+            <input type="submit" value="Submit" id="submit" style="margin-top:10px;" onclick='addCapacity(); displayName(); removeForm(); resetForm(); event.preventDefault();' />
         </form>
+        <p id="displayName"></p>
         </div>
     </div>
 
@@ -54,6 +63,8 @@
             <a href="https://www.lcms.org/" class="w3-bar-item w3-button" target="_blank">More about the LCMS</a>
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>
