@@ -21,30 +21,38 @@
             <a href="index.html" class="w3-bar-item w3-button">Home</a>
             <a href="events.html" class="w3-bar-item w3-button">Events</a>
             <a href="rides.html" class="w3-bar-item w3-button">Carpool</a>
+            <a href="contact.html" class="w3-bar-item w3-button">Contact Us</a>
         </div>
     </nav>
 
     <div class="w3-theme3" id="first">
-        <div id="second">
+        <div id="second" style="text-align: center;">
             <h1 id="welcome" class="w3-theme1">Events</h1>
         <p>
             We have multiple events every week so that we can stay connected during our time at LU. We all know that 
-            its a bit of a time being an LCMS Lutheran at Liberty University, so these events are a valueble time to spend reminding
+            its a bit of a challenge being an LCMS Lutheran at Liberty University, so these events are a valuable way to spend time reminding
             ourselves of the truth of God's Word, and that we are saved by grace through faith in our Baptism.</p>
-
-            <ul>
-                <li><em>Compline</em></li>
-                <ul><li>Every Tuesday at 6pm, we meet in the Jerry Falwell Library courtyard by the waterfall for our compline service.
-                    It takes less than half an hour, but serves as a great way to recenter on God's Word before heading back into the busyness of the 
-                    school week.
-                </li></ul>
-                <li><em>Bible Study</em></li>
-                <ul><li>Every Thursday at 7:30pm, we meet in DeMoss 1338 in the School of Education for our evening bible study,
-                    led by Pastor Yaeger of Our Savior Lutheran Church. We study God's Word from a confessional perspective. 
-                </li></ul>
-            </ul>
+        <p>
+            Click the images below to learn more about our events!
+        </p>
+        <div id="compline_overlay" onclick="complineOverlayOff()">
+            <div id="compline_text" class="text"><em>Compline</em><br>
+                Every Tuesday at 6pm, we meet in the Jerry Falwell Library courtyard by the waterfall for our compline service.
+                    It takes less than half an hour, but serves as a great way to recenter on God's Word before heading back into 
+                    the business of the school week.
+            </div>
         </div>
-    </div>
+        <div id="bible_overlay" onclick="bibleOverlayOff()">
+        <div id="bible_text" class="text">
+            <em>Bible Study</em><br>
+                Every Thursday at 7:30pm, we meet in DeMoss 1366 in the School of Education for our evening bible study,
+                led by Pastor Yaeger of Our Savior Lutheran Church. We study God's Word from a confessional perspective. 
+        </div>
+        </div>
+            <img src="images/church.jpg" class="overlay_img" alt="Image of a Church" onclick="complineOverlayOn()">
+            <img src="images/communion.jpg" class="overlay_img" alt="Loaf of Bread and chalice" onclick="bibleOverlayOn()">
+        </div>
+        </div>
 
 
     <footer class="w3-bar w3-theme">
@@ -56,6 +64,7 @@
             <a href="https://www.lcms.org/" class="w3-bar-item w3-button" target="_blank">More about the LCMS</a>
         </div>
     </footer>
+    <script src="proj6.js"></script>
 
 </body>
 
