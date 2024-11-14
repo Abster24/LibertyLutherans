@@ -21,12 +21,13 @@
             <a href="events.html" class="w3-bar-item w3-button">Events</a>
             <a href="rides.html" class="w3-bar-item w3-button">Carpool</a>
             <a href="contact.html" class="w3-bar-item w3-button">Contact Us</a>
+            <a href="game.html" class="w3-bar-item w3-button">Game</a>
         </div>
     </nav>
 
     <div class="w3-theme3" id="first">
         <div id="second">
-            <h1 id="welcome" class="w3-theme1">Carpool</h1>
+            <h1 class="welcome">Carpool</h1>
         <p>
             Every Sunday, we coordinate rides to make sure that everyone who wants to come to church can come. Whether you need a ride, or can give a ride, please 
             fill out the form below so that we can fit you into our plans!
@@ -52,12 +53,9 @@
             <div id="select" style="display:none;">
                 <label for="amount">Select a driver:</label>
                 <select id="drivers">
-                <datalist id="drivers">
-                    
-                </datalist>
                 </select>
             </div>
-            <input type="submit" value="Submit" id="submit" style="margin-top:10px;" onclick='addCapacity(); reserveSpot(); removeForm(); resetForm(); event.preventDefault();' />
+            <input type="submit" value="Submit" id="submit" style="margin-top:10px;" onclick='addCapacity(); determineType();' />
         </form>
         <p id="displayName"></p>
         </div>
@@ -74,6 +72,10 @@
     </footer>
 
     <script src="proj6.js"></script>
+    <script src="proj7.js"></script>
+    <script src="proj8.js"></script>
+    <script src="objects.js"></script>
+    <script src="proj9.js" defer></script>
 </body>
 
 </html>

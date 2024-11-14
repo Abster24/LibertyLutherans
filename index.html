@@ -21,12 +21,14 @@
             <a href="events.html" class="w3-bar-item w3-button">Events</a>
             <a href="rides.html" class="w3-bar-item w3-button">Carpool</a>
             <a href="contact.html" class="w3-bar-item w3-button">Contact Us</a>
+            <a href="game.html" class="w3-bar-item w3-button">Game</a>
+
         </div>
     </nav>
 
     <div class="w3-theme3" id="first">
         <div id="second">
-        <h1 id="welcome" class="w3-theme1">Welcome!</h1>
+        <h1 class="welcome">Welcome!</h1>
             <p>
                 Greetings! We are the LCMS Lutherans of Liberty University! There aren't very many of us, but we are growing every year.
                 We know that it can be hard to be a confessional Lutheran at a Baptist college like LU, but that's why it is so important to connect with your
@@ -36,7 +38,13 @@
                 We also carpool to church whenever there are services. If you are able to give a ride, or need a ride, 
                 click <a href="rides.html">here</a> to get in touch with us!
             </p>
+            <form id="colorForm" onsubmit="colorForm();">
+                <label for="bannercolor">Don't like the banner color? Change it here!</label><br>
+                <input type="color" name="bannercolor" id="bannercolor">
+                <input type="submit" value="Submit" id="submit" onclick="colorForm();"/>
+            </form>
         </div>
+
     </div>
 
     <footer class="w3-bar w3-theme">
@@ -50,16 +58,17 @@
         <div class="flex-container2">
             <p id="date"></p>
 
-            <script>
+            <!--<script>
                 // JS code to display the current date, and set the text color to red
                 const d = new Date();
                 let test = document.getElementById("date");
                 document.getElementById("date").innerHTML = "&copy " + (d.getMonth() + 1) + "/" + (d.getDay() + 1) + "/" + d.getFullYear();
                 test.style.color = "red";
-            </script>
+            </script>-->
 
         </div>
     </footer>
+    <script src="proj9.js" defer></script>
 </body>
 
 </html>
