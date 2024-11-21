@@ -11,6 +11,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <!--Reworked the form to use jQuery to hide/show parts of the form instead of 
+    the clumsy javascript method-->
+    <script>
+        $(document).ready(function(){
+            $('#give').click(function() {
+                $('#select').hide();
+                $('#capacity').show();
+            });
+
+            $('#need').click(function(){
+                $('#capacity').hide();
+                displayRiderForm();
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -25,9 +43,8 @@
         </div>
     </nav>
 
-    <div class="w3-theme3 first">
-        <div class="second">
-            <h1 class="welcome">Carpool</h1>
+    <div class="second w3-theme3">
+        <h1 class="welcome">Carpool</h1>
         <p>
             Every Sunday, we coordinate rides to make sure that everyone who wants to come to church can come. Whether you need a ride, or can give a ride, please 
             fill out the form below so that we can fit you into our plans!
@@ -35,9 +52,9 @@
         <p id="current"> </p>
         <form id="myForm">
             <p>Choose one:</p>
-            <input type="radio" id="give" name="ride" value="Give Rides" onclick="removeForm(), displayDriverForm()">
+            <input type="radio" id="give" name="ride" value="Give Rides">
             <label for="give">I can give rides</label><br>
-            <input type="radio" id="need" name="ride" value="Need Ride" onclick="removeForm(), displayRiderForm()">
+            <input type="radio" id="need" name="ride" value="Need Ride">
             <label for="need">I need a ride</label><br>
 
             <label for="fname">Please input your first name:</label><br>
@@ -55,10 +72,9 @@
                 <select id="drivers">
                 </select>
             </div>
-            <input type="submit" value="Submit" id="submit" style="margin-top:10px;" onclick='addCapacity(); determineType();' />
+            <input type="submit" value="Submit" id="submit" style="margin-top:10px;" onclick='addCapacity(); determineType(); resetForm();' />
         </form>
         <p id="displayName"></p>
-        </div>
     </div>
 
     <footer class="w3-bar w3-theme">

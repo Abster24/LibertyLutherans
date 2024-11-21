@@ -25,10 +25,6 @@ function displayName() {
     }
 }
 
-// if the user selects that they can give rides, display a hidden part of the form
-function displayDriverForm() {
-    document.getElementById("capacity").style.display = "block";
-}
 
 // if the user selects that they need a ride, display a hidden part of the form
 function displayRiderForm() {
@@ -72,13 +68,7 @@ function reserveSpot() {
 }
 }
 
-// once the form is completed, reset the non-input parts of the form
-function removeForm() {
-    document.getElementById("capacity").style.display = "none";
-    document.getElementById("select").style.display = "none";
-    document.getElementById("displayName").innterHTML = "";
-    document.getElementById("current").innerHTML = "Current Capacity: " + cap;
-}
+
 function resetForm() {
     document.getElementById("myForm").reset();
 }

@@ -81,16 +81,6 @@ label {
     margin:5px;
 }
 
-.first {
-    width: 90%;
-    margin: auto;
-    padding: 5px;
-}
-
-.second {
-    width: 75%;
-    margin: auto;
-}
 
 #date {
     margin: 20px;
@@ -126,6 +116,12 @@ label {
     background-color: rgba(0, 0, 0, 0.781); /* Black background with opacity */
     z-index: 2; 
     cursor: pointer; /* Add a pointer on hover */
+}
+
+.second {
+    width: 75%;
+    margin: auto;
+    padding: 20px;
 }
 
 .text {
