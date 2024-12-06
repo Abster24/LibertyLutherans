@@ -16,7 +16,7 @@
     background-color: #fff;
 }
 
-#nav {
+.nav {
     display: flex;
     align-items: center;
     a {
@@ -60,6 +60,10 @@ label {
     height: 20px;
     width: 150px
 }
+#banner {
+    margin: auto;
+    padding: 7px;
+ }
 
 #foot-links {
     max-width: 40%;
