@@ -1,45 +1,6 @@
 const rideform = document.querySelector('#myForm');
 //const colorForm = document.getElementById('colorForm');
 
-document.addEventListener('DOMContentLoaded', () => {
-    let cookies = readCookies();
-    console.log(cookies);
-
-    if (cookies.bannercolor) {
-        document.querySelectorAll(".welcome").forEach(element => {
-            element.style.background = cookies.bannercolor; 
-        });
-
-    if (cookies.submitted === "yes") {
-        document.getElementById("myForm").style.display = "none";
-        document.getElementById("displayName").innerHTML = "You have already reserved a spot for this week. If you need to change something, please contact us!";
-    }
-
-    }
-});
-
-// Event listener to create cookie when form is submitted.
-rideform.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    let expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 7);
-    let expires = expirationDate.toUTCString();
-
-    document.cookie = "submitted=yes; expires=" + expires + "; path=/";
-});
-
-// Currently in progress to change header background color.
-function colorForm() {
-
-    let expirationDate = new Date();
-    expirationDate.setFullYear(expirationDate.getFullYear() + 10);
-    let expires = expirationDate.toUTCString();
-    let color = document.getElementById('bannercolor').value;
-
-    document.cookie = "bannercolor=" + color + "; expires=" + expires + "; path=/";
-}
-
 // Function to read cookies and place them in array
 function readCookies() {
     let cookies = {};

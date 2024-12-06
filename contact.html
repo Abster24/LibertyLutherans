@@ -12,6 +12,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 
     </head>
     <body>
@@ -36,8 +38,14 @@
 
             <form name="contact_form" id="contact_form" onsubmit="return validateForm()">
                 <label>Full Name:</label>
-                <input type="text" name="fname" id="fname" placeholder="First Name" required>
-                <input type="text" name="lname" id="lname" placeholder="Last Name" required><br>
+                <div ng-app="myApp" ng-controller="personCtrl">
+
+                    First Name: <input type="text" ng-model="firstName"><br>
+                    Last Name: <input type="text" ng-model="lastName"><br>
+                    <br>
+                    Welcome: {{fullName()}}
+                    
+                    </div>
 
                 <fieldset class="contact_forms">
                     <legend>Select your church background</legend>
@@ -71,7 +79,6 @@
                     <input type="tel" name="user_phone" id="user_phone">
                 </fieldset>
 
-
                 <fieldset name="bio" class="contact_forms">
                     <legend>Want us to know more about you? Submit a .txt bio here!</legend>
                     <input type="file" id="user_bio">
@@ -85,7 +92,7 @@
                 <label id="errors" style="color:red;"> </label>
             </form> 
             </div>
-        </div>
+            </div>
 
 
         <footer class="w3-bar w3-theme">
@@ -95,10 +102,12 @@
             <div class="flex-container" id="foot-links">
                 <a href="https://oursaviorlynchburg.org/" class="w3-bar-item w3-button" target="_blank">Connect with Our Savior Lutheran Church</a>
                 <a href="https://www.lcms.org/" class="w3-bar-item w3-button" target="_blank">More about the LCMS</a>
+                <a href="https://catechism.cph.org/" class="w3-bar-item w3-button" target="_blank">Luther's Small Catechism</a>
             </div>
         </footer>
         <script src="proj6.js"></script>
         <script src="proj7.js"></script>
         <script src="proj9.js" defer></script>
+        <script src="final.js" defer></script>
     </body>
 </html>

@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    text-align: justify;
 }
 
 h1 {
@@ -60,11 +61,12 @@ label {
     max-width: 40%;
 }
 
-#welcome {
+.welcome {
     margin:5px;
     padding: 5px 85px 5px 85px;
     border-radius: 25px;
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    background-color: #2274bb;
 }
 
 #logo {
@@ -81,14 +83,13 @@ label {
     margin:5px;
 }
 
-#first {
-    width: 90%;
-    height: 900px;
+.first {
+    width: 95%;
     margin: auto;
     padding: 5px;
 }
 
-#second {
+.second {
     width: 75%;
     margin: auto;
 }
