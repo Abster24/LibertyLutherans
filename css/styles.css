@@ -91,6 +91,21 @@ label {
     margin:5px;
 }
 
+.accord {
+    padding: 5px;
+    text-align: center;
+    background-color: #f2f89d;
+    border: solid 1px #c3c3c3;
+    
+  }
+
+p.accord {
+    padding: 50px;
+    display: none;
+}
+  
+
+
 .first {
     width: 95%;
     margin: auto;
@@ -101,6 +116,7 @@ label {
     width: 75%;
     margin: auto;
 }
+
 
 #date {
     margin: 20px;

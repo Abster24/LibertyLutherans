@@ -11,6 +11,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#lcms_flip").click(function(){
+    $("#lcms_panel").slideToggle("slow");
+  });
+  $("#concord_flip").click(function(){
+    $("#concord_panel").slideToggle("slow");
+  });
+  $("#sac_flip").click(function(){
+    $("#sac_panel").slideToggle("slow");
+  });
+  $("#be_flip").click(function(){
+    $("#be_panel").slideToggle("slow");
+  });
+  $("#wor_flip").click(function(){
+    $("#wor_panel").slideToggle("slow");
+  });
+});
+</script></script>
 </head>
 
 <body>
@@ -27,32 +47,34 @@
     <div class="w3-theme3 first">
         <div class="second">
             <h1 class="welcome">What We Believe</h1>
-            <p>The Lutheran Church—Missouri Synod (LCMS) is a conservative, confessional branch of Lutheranism. It holds
+            <h3 id="lcms_flip" class="accord">The LCMS</h3>
+            <p id='lcms_panel' class="accord">The Lutheran Church—Missouri Synod (LCMS) is a conservative, confessional branch of Lutheranism. It holds
                 to the Bible as the inspired and inerrant Word of God and the sole source of authority for faith and
                 life. Central to LCMS teaching is the doctrine of justification by grace through faith in Christ alone,
                 affirming that salvation is a free gift of God's grace, received through faith in Jesus' life, death,
                 and resurrection. </p>
 
-                <p>The LCMS adheres to the Book of Concord (1580), a collection of Lutheran confessions, as an accurate
+                <h3 id="concord_flip" class="accord">The Book of Concord</h3>
+                <p id="concord_panel" class="accord">The LCMS adheres to the Book of Concord (1580), a collection of Lutheran confessions, as an accurate
                 interpretation of Scripture. The church emphasizes the proper distinction between Law and Gospel, with
                 the Law showing humans their sin and need for a Savior and the Gospel proclaiming the forgiveness and
                 salvation offered in Christ.</p>
 
-                <p>The Sacraments play a vital role in LCMS theology. Baptism is seen as a means of grace that grants
+                <h3 id="sac_flip" class="accord">The Sacraments</h3>
+                <p id="sac_panel" class='accord'>The Sacraments play a vital role in LCMS theology. Baptism is seen as a means of grace that grants
                 forgiveness, faith, and eternal life, including for infants. The Lord's Supper (Holy Communion) is
                 regarded as the true body and blood of Christ, given for the forgiveness of sins, and is practiced with
                 a closed communion policy, inviting only those who share LCMS beliefs.</p>
 
-                <p>LCMS upholds traditional views on marriage, human sexuality, and life issues, teaching that marriage is
+                <h3 id="be_flip" class="accord">Beliefs</h3>
+                <p id="be_panel" class="accord">LCMS upholds traditional views on marriage, human sexuality, and life issues, teaching that marriage is
                 a union between one man and one woman, and life is sacred from conception. The church maintains a
                 male-only pastorate, citing scriptural directives, while recognizing the valuable service of women in
                 other roles.</p>
 
-                <p>Worship in LCMS congregations is liturgical, centered on Word and Sacrament. The church emphasizes
+                <h3 id="wor_flip" class="accord">Worship</h3>
+                <p id="wor_panel" class="accord">Worship in LCMS congregations is liturgical, centered on Word and Sacrament. The church emphasizes
                 catechesis (teaching of the faith), missionary outreach, and the importance of Christian education.</p>
-
-                <p>The LCMS fosters a strong commitment to doctrinal purity and confessional integrity, encouraging members to live
-                according to biblical teachings and to proclaim the Gospel faithfully in all aspects of life.</p>
             
                 <p>Form more information on our beliefs, feel free to contact us, or visit <a href="https://catechism.cph.org/" target="_blank">Luther's Small Catechism</a></p>
         </div>
@@ -70,12 +92,6 @@
             </div>
         </footer>
 
-        <script src="proj6.js"></script>
-        <script src="proj7.js"></script>
-        <script src="proj8.js"></script>
-        <script src="objects.js"></script>
-        <script src="proj9.js" defer></script>
-        <script src="proj11.js" defer></script>
 </body>
 
 </html>
