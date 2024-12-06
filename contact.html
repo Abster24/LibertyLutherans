@@ -40,8 +40,8 @@
                 <label>Full Name:</label>
                 <div ng-app="myApp" ng-controller="personCtrl">
 
-                    First Name: <input type="text" ng-model="firstName"><br>
-                    Last Name: <input type="text" ng-model="lastName"><br>
+                    First Name: <input type="text" ng-model="firstName" class="input"><br>
+                    Last Name: <input type="text" ng-model="lastName" class="input"><br>
                     <br>
                     Welcome: {{fullName()}}
                     
@@ -71,12 +71,12 @@
 
                 <fieldset name="email_field" class="contact_forms" style="display:none">
                     <legend>Enter your email</legend>
-                    <input type="email" name="user_email" id="user_email">
+                    <input type="email" name="user_email" id="user_email" class="input">
                 </fieldset>
 
                 <fieldset name="phone_field" class="contact_forms" style="display:none">
                     <legend>Enter your phone number</legend>
-                    <input type="tel" name="user_phone" id="user_phone">
+                    <input type="tel" name="user_phone" id="user_phone" class="input">
                 </fieldset>
 
                 <fieldset name="bio" class="contact_forms">

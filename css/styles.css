@@ -15,6 +15,7 @@
     color: #000 !important;
     background-color: #fff;
 }
+
 #nav {
     display: flex;
     align-items: center;
@@ -41,6 +42,10 @@ h1 {
     font-size: 3.0em;
 }
 
+p {
+    text-align: center;
+}
+
 footer {
     max-height: 20%;
     margin-top: auto;
@@ -51,8 +56,7 @@ label {
     line-height: 24px;
 }
 
-  
-#lname, #fname {
+.input{
     height: 20px;
     width: 150px
 }
@@ -116,6 +120,7 @@ label {
     z-index: 2; 
     cursor: pointer; 
 }
+
 #bible_overlay {
     position: fixed; /* Sit on top of the page content */
     display: none;
@@ -138,7 +143,7 @@ label {
     color: white;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
-  }
+}
 
 .flex-container {
     margin: 15px auto 15px auto;
@@ -166,7 +171,7 @@ label {
 }
 
 @media (max-width: 800px) {
-    #first {
+    .first {
         width:auto;
         margin:0px;
     }

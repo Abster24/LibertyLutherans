@@ -51,9 +51,8 @@
             Every Sunday, we coordinate rides to make sure that everyone who wants to come to church can come. Whether you need a ride, or can give a ride, please 
             fill out the form below so that we can fit you into our plans!
         </p>
-        <p id="current"> </p>
         <form id="myForm">
-            <p>Choose one:</p>
+            Choose one:<br>
             <input type="radio" id="give" name="ride" value="Give Rides">
             <label for="give">I can give rides</label><br>
             <input type="radio" id="need" name="ride" value="Need Ride">
@@ -61,15 +60,15 @@
 
             <div ng-app="myApp" ng-controller="personCtrl">
 
-                First Name: <input type="text" ng-model="firstName"><br>
-                Last Name: <input type="text" ng-model="lastName"><br>
+                First Name: <input type="text" ng-model="firstName" class="input"><br>
+                Last Name: <input type="text" ng-model="lastName" class="input"><br>
                 <br>
                 Welcome: {{fullName()}}
                 
                 </div>
 
             <label for="phone">Please input your phone number:</label><br>
-            <input type="text" id="phone"><br>
+            <input type="text" id="phone" class="input"><br>
 
             <div id="capacity" style="display: none;">
             <label for="amount">How many passengers can you fit in your car?</label><br>
